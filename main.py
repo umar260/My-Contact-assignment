@@ -1,7 +1,6 @@
 # Main Program Loop
-def main():
-        Name =["John", "Ben" , "Sam"]
-        print(Name)
+Name =["John", "Ben" , "Sam"]
+    print(Name)
 
     
         
