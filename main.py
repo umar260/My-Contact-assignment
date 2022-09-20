@@ -70,8 +70,7 @@ while True:
         x = 0
         break
 
+
 print(users)
 
-for i in range(len(users)):
-    print(users[i]["name"])
 
