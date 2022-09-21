@@ -28,39 +28,41 @@ while True:
         for i in range(len(users)):
             print(users[i]["name"])
     elif x == "2":
-        y = str(input("Enter the Name of the contact you want to search for:"))
+        list = str(input("Enter the Name of the contact you want to search for:"))
         for i in users:
-            if y == i["name"]:
+            if list == i["name"]:
                 print(i)
                 break
             print("Contact not found")
             break
     elif x == "3":
-        y = str(input("Enter the Name of the contact you want to edit:"))
+        list = str(input("Enter the Name of the contact you want to edit:"))
         for i in users:
-            if y in i["name"]:
+            if list in i["name", "phone", "email"]:
                 z = str(input("Enter the new name of the contact:"))
-                i["name"] = z
+                i["name"] = z 
+                i["phone"] = z
+                i["email"] = z
                 print("Contact edited")
                 break
             print("Contact not found")
             break
     elif x == "4":
-        y = input("Enter the Name of the contact you want to add:")
+        list = input("Enter the Name of the contact you want to add:")
         for i in users:
-            if y in i["name"]:
+            if list in i["name"]:
                 print("Contact already exists")
                 break
             else:
                 z = input("Enter the phone number of the contact:")
                 a = input("Enter the email of the contact:")
-                users.append({"name": y, "phone": z, "email": a})
+                users.append({"name": list, "phone": z, "email": a})
                 print("Contact added")
                 break
     elif x == "5":
-        y = input("Enter the Name of the contact you want to remove:")
+        list = input("Enter the Name of the contact you want to remove:")
         for i in users:
-            if y in i["name"]:
+            if list in i["name"]:
                 users.remove(i)
                 print("Contact removed")
                 break
