@@ -13,11 +13,11 @@ users = [{
         "phone": "555-5555", 
         "email": "Ben@mail.com"
     }, {
-        "name": "Mr. V", 
+        "name": "V", 
         "phone": "444-4444", 
-        "email": "mrv@mail.com"
+        "email": "v@mail.com"
     }, {
-        "name": "Mr. Sam", 
+        "name": "Sam", 
         "phone": "444-4444", 
         "email": "Sam@mail.com"
     }];    
@@ -28,42 +28,41 @@ while True:
         for i in range(len(users)):
             print(users[i]["name"])
     elif x == "2":
-        list = str(input("Enter the Name of the contact you want to search for:"))
-        for i in users:
-            if list == i["name"]:
+        search_name = str(input("Enter the Name of the contact you want to search for:"))
+        for user_dict in users:
+            if search_name == ["name"]:
                 print(i)
                 break
             print("Contact not found")
             break
     elif x == "3":
-        list = str(input("Enter the Name of the contact you want to edit:"))
-        for i in users:
-            if list in i["name", "phone", "email"]:
-                z = str(input("Enter the new name of the contact:"))
-                i["name"] = z 
-                i["phone"] = z
-                i["email"] = z
+        search_name = str(input("Enter the Name of the contact you want to edit:"))
+        for user_dict in users:
+            if search_name == user_dict["name"]:
+                user_dict["name"] = input("Enter the new name of the contact:")
+                user_dict["phone"] = input("Enter new phone number:")
+                user_dict["email"] = input("Enter new email:")
                 print("Contact edited")
                 break
             print("Contact not found")
             break
     elif x == "4":
-        list = input("Enter the Name of the contact you want to add:")
-        for i in users:
-            if list in i["name"]:
+        search_name = input("Enter the Name of the contact you want to add:")
+        for user_dict in users:
+            if search_name in user_dict["name"]:
                 print("Contact already exists")
                 break
             else:
-                z = input("Enter the phone number of the contact:")
-                a = input("Enter the email of the contact:")
-                users.append({"name": list, "phone": z, "email": a})
+                phone = input("Enter the phone number of the contact:")
+                email = input("Enter the email of the contact:")
+                users.append({"name": list, "phone": phone, "email": email})
                 print("Contact added")
                 break
     elif x == "5":
-        list = input("Enter the Name of the contact you want to remove:")
-        for i in users:
-            if list in i["name"]:
-                users.remove(i)
+        Name_remove = input("Enter the Name of the contact you want to remove:")
+        for user_dict in users:
+            if Name_remove in user_dict["name"]:
+                users.remove(user_dict)
                 print("Contact removed")
                 break
             print("Contact not found")
