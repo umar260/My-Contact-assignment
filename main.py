@@ -30,8 +30,11 @@ while True:
     elif x == "2":
         search_name = input("Enter the Name of the contact you want to search for:")
         for user_dict in users:
-            if search_name == user_dict["users"]:
-                print(search_name)
+            if search_name == user_dict["name"]:
+                user_dict["name"]
+                user_dict["phone"]
+                user_dict["email"]
+                print(user_dict)
                 break
             print("Contact not found")
             break
