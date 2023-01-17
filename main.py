@@ -23,11 +23,11 @@ users = [{
     }];    
 
 while True:
-    x = getMenuSelection()
-    if x == "1":
+    selection = getMenuSelection()
+    if selection == "1":
         for i in range(len(users)):
             print(users[i]["name"])
-    elif x == "2":
+    elif selection == "2":
         search_name = input("Enter the Name of the contact you want to search for:")
         for user_dict in users:
             if search_name == user_dict["name"]:
@@ -38,7 +38,7 @@ while True:
                 break
             print("Contact not found")
             break
-    elif x == "3":
+    elif selection == "3":
         search_name = str(input("Enter the Name of the contact you want to edit:"))
         for user_dict in users:
             if search_name == user_dict["name"]:
@@ -49,7 +49,7 @@ while True:
                 break
             print("Contact not found")
             break
-    elif x == "4":
+    elif selection == "4":
         search_name = input("Enter the Name of the contact you want to add:")
         for user_dict in users:
             if search_name in user_dict["name"]:
@@ -61,7 +61,7 @@ while True:
                 users.append({"name": list, "phone": phone, "email": email})
                 print("Contact added")
                 break
-    elif x == "5":
+    elif selection == "5":
         Name_remove = input("Enter the Name of the contact you want to remove:")
         for user_dict in users:
             if Name_remove in user_dict["name"]:
@@ -71,7 +71,7 @@ while True:
             print("Contact not found")
             break
     else:
-        x = 0
+        selection = 0
         break
 
 
